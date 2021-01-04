@@ -7,7 +7,7 @@ class Boat < ActiveRecord::Base
     all.limit(5)
   end
 
-  def self.dinghy
+  def self.dinghy #returns boats shorter than 20 feet 
     # where("length < 20")
   end
 
