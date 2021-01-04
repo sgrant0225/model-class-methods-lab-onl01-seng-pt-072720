@@ -12,7 +12,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.ship #returns boats 20 feet or longer 
-    # where("length >= 20")
+     where("length >= 20")
   end
 
   def self.last_three_alphabetically
