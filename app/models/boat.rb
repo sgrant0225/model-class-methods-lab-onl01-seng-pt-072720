@@ -3,16 +3,16 @@ class Boat < ActiveRecord::Base
   has_many    :boat_classifications
   has_many    :classifications, through: :boat_classifications
 
-  def self.first_five
-    # all.limit(5)
+  def self.first_five #returns the first five baots 
+    all.limit(5)
   end
 
-  def self.dinghy
-    # where("length < 20")
+  def self.dinghy #returns boats shorter than 20 feet 
+     where("length < 20")
   end
 
-  def self.ship
-    # where("length >= 20")
+  def self.ship #returns boats 20 feet or longer 
+     where("length >= 20")
   end
 
   def self.last_three_alphabetically
